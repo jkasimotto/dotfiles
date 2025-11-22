@@ -44,6 +44,7 @@ local function build_server_config(name)
 end
 
 function M.setup()
+  local lspconfig = require("lspconfig")
   local servers = {
     "lua_ls",
     "ts_ls",
@@ -57,8 +58,12 @@ function M.setup()
   require("mason-lspconfig").setup({ ensure_installed = servers })
 
   for _, server in ipairs(servers) do
-    vim.lsp.config(server, build_server_config(server))
-    vim.lsp.enable(server)
+    local def = lspconfig[server]
+    if def and def.setup then
+      def.setup(build_server_config(server))
+    else
+      vim.notify(("LSP server %s not found in lspconfig"):format(server), vim.log.levels.WARN)
+    end
   end
 end
 
