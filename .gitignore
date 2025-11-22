@@ -1,0 +1,15 @@
+# macOS cruft
+.DS_Store
+
+# Local shell state (keep secrets private)
+zsh/.zsh_local
+zsh/.zsh_history
+zsh/.zsh_sessions
+zsh/.zcompdump*
+zsh/.zshrc.pre-oh-my-zsh
+
+# Neovim generated files
+nvim/.config/nvim/.netrwhist
+nvim/.config/nvim/undo/
+nvim/.config/nvim/backup/
+nvim/.config/nvim/swap/

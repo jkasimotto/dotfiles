@@ -1,0 +1,4 @@
+# Put machine-specific aliases, environment variables, and secrets here.
+# Example:
+# export GITHUB_TOKEN="..."
+# alias pipi='ssh julian@raspberrypi.local'
