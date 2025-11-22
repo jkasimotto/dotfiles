@@ -1,21 +1,13 @@
-# NeoVim Configuration
+# Neovim Configuration
 
-Personal NeoVim configuration managed via Git. Clone or symlink this repository into `~/.config/nvim` on any machine to replicate the setup.
+Managed as part of the stowable dotfiles. The symlink is created by running `stow nvim` from the repo root (`~/dotfiles`).
 
 ## Getting Started
 
 ```bash
-# back up existing config if any
-mv ~/.config/nvim ~/.config/nvim.backup
-
-# clone this repo
-git clone git@github.com:julianotto/nvim-config.git ~/Projects/nvim-config
-
-# keep ~/.config/nvim pointing at the tracked files
-ln -sf ~/Projects/nvim-config ~/.config/nvim
-
-# open neovim; lazy.nvim will bootstrap itself and install plugins
-nvim
+cd ~/dotfiles
+stow nvim
+nvim  # lazy.nvim bootstraps itself and installs plugins
 ```
 
 ## Included
